@@ -1,6 +1,6 @@
 # Formation Mongo DB
 
-## Installation (UUbuntu  avec tarball)
+## TP1 : Installation (Ubuntu  avec tarball)
 
 ### Récupérer le tarball
 ```shell
@@ -45,3 +45,57 @@ mongod
 mongo
 ```
 
+
+## TP2 : Décourverte du shell Mongo
+### Afficer la base de données en utilisation
+```js
+db
+```
+Cela devrait afficher test qui est la base de données par défaut.
+
+
+### Afficher la bases de données disponibles
+```js
+show dbs
+```
+
+### Utiliser une base de données
+```shell
+use <database>
+```
+Il est possible d'utiliser une base de données ou une collection inexitante.Par exemple le code suivant créer la base `myNewDatabase` et la collection `myCollection` pendant l'opération `insertOne()` 
+```js
+use myNewDatabase
+db.myCollection.insertOne( { x: 1 } );
+```
+`db` fait réference à la base de données en utilisation 
+`myCollection` est le nom de la collection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Import mongo dataset
+```shell
+mongoimport --db mongo-training --collection companies --file companies.json
+```

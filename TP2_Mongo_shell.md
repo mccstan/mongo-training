@@ -2,23 +2,29 @@
 
 
 ## TP2 : Décourverte du shell Mongo
+
 ### Afficer la base de données en utilisation
+
 ```js
 db
 ```
+
 Cela devrait afficher test qui est la base de données par défaut.
 
-
 ### Afficher la bases de données disponibles
+
 ```js
 show dbs
 ``````
 
 ### Utiliser une base de données
+
 ```shell
 use <database>
 ```
+
 Il est possible d'utiliser une base de données ou une collection inexitante.Par exemple le code suivant créer la base `myNewDatabase` et la collection `myCollection` pendant l'opération `insertOne()` 
+
 ```js
 use myNewDatabase
 db.myCollection.insertOne( { x: 1 } );
@@ -27,7 +33,9 @@ db.myCollection.insertOne( { x: 3 } );
 db.myCollection.insertOne( { x: 4 } );
 db.myCollection.insertOne( { x: 5, y : {a : 1, b : 2} } );
 ```
+
 Un acquitement est reçu pour confirmer l'insertion
+
 ```js
 > db.myCollection.insertOne( { x: 1 } );
 {
@@ -40,13 +48,16 @@ Un acquitement est reçu pour confirmer l'insertion
 `myCollection` est le nom de la collection
 
 ### Afficher les collections disponibles
+
 ```js
 show collections
 ```
 
 ### Obtenir de l'aide sur les fonctions disponibles pour manipuler la collection
+
 Utiliser le nom de la fonction sans parenthèses
 On obtient une aide détaillée sur la fonction find
+
 ```js
 > db.myCollection.find
 function (query, fields, limit, skip, batchSize, options) {
@@ -77,7 +88,9 @@ function (query, fields, limit, skip, batchSize, options) {
 ```
 
 ### La fonction find
+
 affiche l'ensemble des documents de la collection
+
 ```js
 > db.myCollection.find()
 { "_id" : ObjectId("59f1abceb6729ac81ebf5755"), "x" : 1 }
@@ -86,8 +99,11 @@ affiche l'ensemble des documents de la collection
 { "_id" : ObjectId("59f1dae724d9ac7cc4c3e46a"), "x" : 4 }
 { "_id" : ObjectId("59f1dcb224d9ac7cc4c3e46b"), "x" : 5, "y" : { "a" : 1, "b" : 2 } }
 ```
+
 ### Formatter l'affichage avec la fonction pretty
+
 Affichage hierarchique ...
+
 ```js
 > db.myCollection.find().pretty()
 { "_id" : ObjectId("59f1abceb6729ac81ebf5755"), "x" : 1 }
@@ -103,8 +119,8 @@ Affichage hierarchique ...
 }
 ```
 
-
 ### Opérations sur plusieurs lignes
+
 ```js
 > var i = 12
 > if (i> 5){

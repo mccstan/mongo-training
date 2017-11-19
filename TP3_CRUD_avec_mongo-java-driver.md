@@ -69,6 +69,7 @@ MongoClient mongoClient = new MongoClient(
 ### Databases & Collections
 
 #### Imports
+
 ```java
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;

@@ -1,0 +1,4 @@
+mongo-docker-compose/*/data
+*/.idea
+*/.gradle
+*/build

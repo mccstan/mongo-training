@@ -48,3 +48,14 @@ mongod
 ```shell
 mongo
 ```
+
+
+## Installer Weave scope
+sudo curl -L git.io/scope -o /usr/local/bin/scope
+sudo chmod a+x /usr/local/bin/scope
+
+
+## Lancer : par défaut sur le port 4040
+scope launch
+## lancer avec un autre port et/ou adresse
+scope launch --app.http.address=127.0.0.1:9000

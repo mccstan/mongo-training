@@ -156,7 +156,6 @@ db.auth("admin", "admin" )
 
 
 ### Créer un utilisateur
-Pendant la connection
 ```js
 use admin
 db.createUser(

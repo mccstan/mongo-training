@@ -2,3 +2,7 @@ mongo-docker-compose/*/data
 */.idea
 */.gradle
 */build
+*/out
+*/bin
+*/.classpath
+*/.project

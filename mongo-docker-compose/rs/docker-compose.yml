@@ -7,10 +7,7 @@ services:
     command: mongod --noprealloc --smallfiles --replSet mongors --dbpath /data/db --nojournal --oplogSize 16 --noauth
     ports:
       - 27017:27017
-    environment:
-      TERM: xterm
     volumes:
-      - /etc/localtime:/etc/localtime:ro
       - ${DATA_DIR}/mongo1:/data/db
 
   mongo2:
@@ -18,10 +15,7 @@ services:
     command: mongod --noprealloc --smallfiles --replSet mongors --dbpath /data/db --nojournal --oplogSize 16 --noauth
     ports:
       - 27018:27017    
-    environment:
-      TERM: xterm
     volumes:
-      - /etc/localtime:/etc/localtime:ro
       - ${DATA_DIR}/mongo2:/data/db
 
   mongo3:
@@ -29,8 +23,5 @@ services:
     command: mongod --noprealloc --smallfiles --replSet mongors --dbpath /data/db --nojournal --oplogSize 16 --noauth
     ports:
       - 27019:27017    
-    environment:
-      TERM: xterm
     volumes:
-      - /etc/localtime:/etc/localtime:ro
       - ${DATA_DIR}/mongo3:/data/db

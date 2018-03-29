@@ -20,6 +20,6 @@ public class ReadWithFilterOperators {
                 ))
                 .forEach(ConnectUtil.printBlock);
 
-        ConnectUtil.mongoClient.close();
+         ConnectUtil.mongoClient.close();
     }
 }

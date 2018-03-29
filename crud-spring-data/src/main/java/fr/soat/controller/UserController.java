@@ -16,7 +16,7 @@ public class UserController {
     UserRepository userRepository;
 
 
-    //Create a User
+    //Create a Userz
     @RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public  void create(@RequestBody User user){
         userRepository.save(user);

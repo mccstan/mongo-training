@@ -1,4 +1,4 @@
-version: "2"
+version: "3"
 services:
 
   mongors1n1:
@@ -11,8 +11,6 @@ services:
     container_name: mongors1n2
     image: mongo:3.0.14
     command: mongod --noprealloc --smallfiles --replSet mongors1 --dbpath /data/db --nojournal --oplogSize 16 --noauth
-
-
     volumes:
       - ${DATA_DIR}/mongors1n2:/data/db
 
@@ -20,8 +18,6 @@ services:
     container_name: mongors1n3
     image: mongo:3.0.14
     command: mongod --noprealloc --smallfiles --replSet mongors1 --dbpath /data/db --nojournal --oplogSize 16 --noauth
-
-
     volumes:
       - ${DATA_DIR}/mongors1n3:/data/db
 

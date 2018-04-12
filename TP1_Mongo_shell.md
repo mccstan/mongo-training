@@ -1,7 +1,7 @@
 # Formation Mongo DB
 
 
-## TP2 : Décourverte du shell Mongo
+## TP1 : Décourverte du shell Mongo
 
 ### Afficer la base de données en utilisation
 
